@@ -163,10 +163,10 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-img.scale {
+.scale {
   transition: all 0.2s;
 }
-img.scale:hover {
+.scale:hover {
   transform: scale(1.05);
 }
 .navigation {
@@ -181,13 +181,11 @@ img.scale:hover {
   position: fixed;
   opacity: 1;
   top: 0rem;
-  transition: top 0.2s;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
 }
 .navigation.scrolled {
   opacity: 0.5;
-  transition: opacity 0.2s;
-  transition: top 0.2s;
+  transition: all 0.2s;
   top: -6.8rem;
 }
 @media (max-width: 500px) {
@@ -197,7 +195,7 @@ img.scale:hover {
 }
 .navigation.scrolled:hover {
   opacity: 1;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
 }
 .navigation > h1 {
   margin: 2rem 0;
