@@ -190,6 +190,11 @@ img.scale:hover {
   transition: top 0.2s;
   top: -6.8rem;
 }
+@media (max-width: 500px) {
+  .navigation.scrolled {
+    opacity: 1;
+  }
+}
 .navigation.scrolled:hover {
   opacity: 1;
   transition: opacity 0.2s;
