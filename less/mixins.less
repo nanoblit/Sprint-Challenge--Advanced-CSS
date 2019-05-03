@@ -4,3 +4,21 @@
     align-items: @alignItems;
     flex-direction: @flexDirection;
 }
+
+.button(@color, @textColor) {
+    .flex(center, center, row);
+    font-size: 2rem;
+    color: @textColor;
+    text-align: center;
+    width: 10rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    background-color: @color;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+
+    &:hover {
+        background-color: lighten(@color, 8%);
+        color: darken(@textColor, 8%);
+    }
+}
