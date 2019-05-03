@@ -5,6 +5,13 @@
     flex-direction: @flexDirection;
 }
 
+.navLink() {
+    color: @nav-font;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin: 0 1.5rem 0;
+}
+
 .button(@color, @textColor) {
     .flex(center, center, row);
     font-size: 2rem;
@@ -16,6 +23,12 @@
     background-color: @color;
     cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
+
+    @media @phone {
+        width: 100%;
+        height: 6.5rem;
+        margin: 0 15px;
+    }
 
     &:hover {
         background-color: lighten(@color, 8%);
