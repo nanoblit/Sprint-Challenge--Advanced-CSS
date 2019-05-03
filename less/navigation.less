@@ -1,1 +1,36 @@
-// Navigation code here
+.navigation {
+    .flex(flex-start, center, column);
+    background-color: @nav-bg;
+    border-bottom: 1px solid @nav-border;
+    padding-bottom: 1rem;
+    width: 100%;
+    position: fixed;
+    opacity: 1;
+    top: 0rem;
+    transition: all 0.2s;
+
+    &.scrolled {
+        opacity: 0.5;
+        transition: all 0.2s;
+        top: -6.8rem;
+
+        @media (any-pointer: coarse) {
+            opacity: 1;
+        }
+    
+        &:hover {
+            opacity: 1;
+            transition: all 0.2s;
+        }
+    }    
+
+    > h1 {
+        margin: 2rem 0;
+    }
+
+    > nav {
+        > a {
+            .navLink();
+        }
+    }
+}

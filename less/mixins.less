@@ -1,1 +1,41 @@
-// Mixins Here
+.flex(@justifyContent, @alignItems, @flexDirection) {
+    display: flex;
+    justify-content: @justifyContent;
+    align-items: @alignItems;
+    flex-direction: @flexDirection;
+}
+
+.navLink() {
+    color: @nav-font;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin: 0 1.5rem 0;
+
+    @media @phone {
+        margin: 0 0.5rem;
+    }
+}
+
+.button(@color, @textColor) {
+    .flex(center, center, row);
+    font-size: 2rem;
+    color: @textColor;
+    text-align: center;
+    width: 10rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    background-color: @color;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+
+    @media @phone {
+        width: 100%;
+        height: 6.5rem;
+        margin: 0 15px;
+    }
+
+    &:hover {
+        background-color: lighten(@color, 8%);
+        color: darken(@textColor, 8%);
+    }
+}
