@@ -173,10 +173,16 @@ p {
   padding-bottom: 1rem;
   width: 100%;
   position: fixed;
+  opacity: 1;
+  top: 0px;
+  transition: top 0.2s;
+  transition: opacity 0.2s;
 }
 .navigation.scrolled {
   opacity: 0.2;
   transition: opacity 0.2s;
+  transition: top 0.2s;
+  top: -6.8rem;
 }
 .navigation.scrolled:hover {
   opacity: 1;
