@@ -3,6 +3,18 @@
     background-color: @nav-bg;
     border-bottom: 1px solid @nav-border;
     padding-bottom: 1rem;
+    width: 100%;
+    position: fixed;
+
+    &.scrolled {
+        opacity: 0.2;
+        transition: opacity 0.2s;
+    
+        &:hover {
+            opacity: 1;
+            transition: opacity 0.2s;
+        }
+    }    
 
     > h1 {
         margin: 2rem 0;
